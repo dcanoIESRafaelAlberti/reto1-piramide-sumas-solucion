@@ -13,7 +13,8 @@ def validar_numero(numero: int) -> None:
         ValueError: Si el número no está comprendido entre NUMERO_MINIMO y NUMERO_MAXIMO.
     """
     if numero < NUMERO_MINIMO or numero > NUMERO_MAXIMO:
-        raise ValueError("**Error: el número debe estar en el rango 0-20**")
+        raise ValueError("Error: el número debe estar en el rango " + 
+                         f"{NUMERO_MINIMO}-{NUMERO_MAXIMO}")
 
 
 def convertir_entero(entrada: str) -> int:
