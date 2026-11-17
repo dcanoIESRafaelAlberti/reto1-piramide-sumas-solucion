@@ -222,11 +222,27 @@ def piramide_descendente(num: int) -> str:
         res += linea_piramide_descendente(n) + "\n"
         n -= 1
 
+    return res
+
     # Alternativa: almacenar las líneas en una lista y
     # unirlas al final mediante "\n".join(...).
     # Esto evita concatenaciones sucesivas de cadenas.
+    # lineas: list[str] = []
 
-    return res
+    # for n in range(num, -1, -1):
+    #     lineas.append(linea_piramide_descendente(n))
+
+    # return "\n".join(lineas) + "\n"    
+
+    # Otra alternativa más compacta y elegante...
+    # con una "expresión generadora" dentro de join().
+    # En lugar de construir una lista con todas las líneas, 
+    # va produciendo cada cadena conforme join() la solicita.
+
+    # return "\n".join(
+    #     linea_piramide_descendente(n)
+    #     for n in range(num, -1, -1)
+    # ) + "\n"
 
 
 def piramide_ascendente(num: int) -> str:
