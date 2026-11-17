@@ -1,3 +1,6 @@
+NUMERO_MAXIMO: int = 20
+NUMERO_MINIMO: int = 0
+
 
 def validar_numero(numero: int) -> None:
     """
@@ -7,10 +10,10 @@ def validar_numero(numero: int) -> None:
         numero: Número entero que se desea validar.
 
     Raises:
-        ValueError: Si el número no está comprendido entre 0 y 20.
+        ValueError: Si el número no está comprendido entre NUMERO_MINIMO y NUMERO_MAXIMO.
     """
-    if numero < 0 or numero > 20:
-        raise ValueError("Error: el número debe estar en el rango 0-20")
+    if numero < NUMERO_MINIMO or numero > NUMERO_MAXIMO:
+        raise ValueError("**Error: el número debe estar en el rango 0-20**")
 
 
 def convertir_entero(entrada: str) -> int:
